@@ -1,7 +1,7 @@
 //实现Stack数据结构
 
 //创建构造函数
-function Stack(){
+var Stack=function (){
     //计数器,也就是栈顶元素的位置
     this.len=0;
     
