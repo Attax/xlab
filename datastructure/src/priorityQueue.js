@@ -3,7 +3,7 @@
 
 var Queue=function(){
     //开辟一块存储空间，此处用数组来模拟内存空间
-    storage=[];
+    this.storage=[];
 } 
 
 
@@ -118,7 +118,7 @@ PriorityQueue.prototype.enqueue=function(element,priority){
 
 	
 	
-	//如果队列没有元素
+	//如果队列为空
 	if(_that.isEmpty()){
 		//将元素压入队尾（此时也是队首）
 		_that.storage.push(_newElement);
