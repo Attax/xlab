@@ -43,7 +43,15 @@ Queue.prototype={
 		//返回
 		return this.storage[this.storage.length-1];
 	},
+	
+	/**
+	* @method clear 清空队列
+	*/
 
+	clear:function(){
+		//清空存储空间
+		this.storage=[];
+	},
 	/**
 	* @method isEmpty 返回队列是否为空
 	* @return Boolean true or false
