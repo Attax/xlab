@@ -8,7 +8,7 @@ var Queue=function(){
 
 
 Queue.prototype={
-	//storage:[],
+
 	/**
 	* @method enqueue 入队
 	* @param element 待入队的元素
