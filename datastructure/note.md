@@ -7,11 +7,12 @@
 Stack一种连续储存的数据结构，具有的后进先出（last in first out）特点，类似于一堆盘子，只能从最上面取，一个接着一个，后放上去的盘子先被使用。
 想要读取栈中的某个元素，就是将其之间的所有元素出栈才能完成。Stack通常具有如下的方法或属性：
 
-+ push（入栈/压栈）
-+ pop （出栈）
-+ peek（返回栈顶元素
-+ length（返回栈内元素数量）
-+ clear （清空栈）
++ push(element)：入栈/压栈
++ pop ()：出栈，返回被移除的元素
++ peek()：返回栈顶元素
++ size()：返回栈内元素数量
++ clear ()：清空栈
++ isEmpty()：返回栈是否为空
 
 ```javascript
 //实现Stack数据结构
@@ -82,6 +83,13 @@ Stack.prototype={
         this.storage={};
         //重置计数器
         this.len=0;
+    },
+    /**
+    * @method isEmpty 返回栈是否为空
+    * @return Boolean true or false
+    */
+    isEmpty:function(){
+        return !this.len;
     }
     
 }
@@ -94,13 +102,13 @@ Stack.prototype={
 
 Queue类似Stack,不同的是遵循先进先出（first in first out）的原则,也就是先来后到，最常见的例子就是是生活中的排队，这也是这种数据结构叫做Queque（队列）的原因。与Stack类型，Queue也有一些常见的方法：
 
-+ enqueue（入队）:向队尾添加元素
-+ dequeque （出队）：移除队首元素，并将该元素返回
-+ front : 获取队首元素
-+ back : 获取队尾元素
-+ clear:清空队列
-+ isEmpty : 判断队列是否为空
-+ size ： 获取队里元素数量
++ enqueue(element)：入队，向队尾添加元素
++ dequeque()：出队，移除队首元素，并将该元素返回
++ front()： 获取队首元素
++ back()： 获取队尾元素
++ clear()：清空队列
++ isEmpty()： 判断队列是否为空
++ size ()： 获取队列元素数量
 
 
 
@@ -275,7 +283,7 @@ Queue.prototype={
 };
 
 
-
+//实现一个继承方法
 var extend=function(subClass,superClass){
 	//subClass
 
@@ -359,4 +367,14 @@ PriorityQueue.prototype.enqueue=function(element,priority){
 链表在生活中常见的例子是火车编组和自行车链条。火车车厢是火车编组（链表）的节点，车厢之间的连接挂钩就是引用（也就是所谓的指针）。如果要给火车编组中添加一节车厢（新节点），只需要把要添加位置的两个车厢之间的连接断开，把前一节车厢和新添加的车厢连接上，再把新添加的车厢的和原来的后一节车厢连接起来。这个操作就是链表中的修改操作。
 
 链表通常具有以下方法或属性：
+
++ append（入队）:向队尾添加元素
++ dequeque （出队）：移除队首元素，并将该元素返回
++ front : 获取队首元素
++ back : 获取队尾元素
++ clear:清空队列
++ isEmpty : 判断队列是否为空
++ size ： 获取队里元素数量
+
+
 
