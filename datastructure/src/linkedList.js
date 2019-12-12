@@ -70,7 +70,7 @@ LinkedList.prototype = {
 
 
             //设置当前节点为头节点，即第0个节点
-            var current = head;
+            var current = _that.head;
             //记录上一个节点（移除一个节点后，需要把断开的链表重新连上，所以需要记录上一个和下一个）
             var previous = null;
             //记录当前位置为0
@@ -78,7 +78,7 @@ LinkedList.prototype = {
             //如果要在链表头部添加
             if (position === 0) {
                 node.next = current;
-                head = node;
+                _that.head = node;
             } else {
                 /**
                  * 对当前位置++，比较是否小于要添加节点的位置，
@@ -111,14 +111,14 @@ LinkedList.prototype = {
         //先检查越界值,确保传入的位置在链表范围内
         if (position > -1 && position < _that.length) {
             //设置当前节点为头节点，即第0个节点
-            var current = head;
+            var current = _that.head;
             //记录上一个节点（移除一个节点后，需要把断开的链表重新连上，所以需要记录上一个和下一个）
             var previous = null;
             //记录当前位置为0
             var index = 0;
             //如果要移除的是首节点，则移除后的首节点为下一个节点
             if (position === 0) {
-                head = current.next;
+                _that.head = current.next;
             } else {
                 /**
                  * 对当前位置++，比较是否小于要移除的位置，
@@ -166,7 +166,7 @@ LinkedList.prototype = {
     },
 
     print: function() {
-        console.log(this.storage);
+        console.log(this);
     }
 
 };
