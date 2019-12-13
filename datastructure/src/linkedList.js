@@ -148,12 +148,28 @@ LinkedList.prototype = {
     indexOf: function(element) {
 
     },
+	
+	/**
+	* @method toString 转为字符串输出
+	*/
+	toString:function(){
+		var _that=this;
+		var current=_that.head;
+		var string='';
+		
+		while(current){
+			string=current.element;
+			current=current.next;
+		}
+		
+		return string;
+	},
     /**
-     * @method isEmpty 返回队列是否为空
+     * @method isEmpty 返回链表是否为空
      * @return Boolean true or false
      */
     isEmpty: function() {
-        return !this.storage.length;
+        return !this.length;
     },
 
     /**
@@ -162,7 +178,7 @@ LinkedList.prototype = {
      */
 
     size: function() {
-        return this.storage.length;
+        return this.length;
     },
 
     print: function() {
