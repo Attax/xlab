@@ -918,3 +918,4 @@ DoublyLinkedList.prototype = {
 
 ## 集合
 
+集合是一组无序且唯一（不能重复）的项组成
