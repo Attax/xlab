@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环链表And双向循环链表 LinkedList-数据结构</title>
+</head>
+<body>
+    <script src="src/circularLinkedList.js"></script>
+    <script src="src/circularDoublyLinkedList.js"></script>
+    <script>
+        //循环链表
+        var clink=new circularLinkedList();
+        //双向循环链表
+        var cdblink=new circularDoublyLinkedList();
+        
+        
+        cdblink.append(1);
+        cdblink.append(2);
+        console.log(cdblink.toString());
+        cdblink.remove(1);
+        console.log(cdblink.toString());
+        cdblink.append(3);
+
+    </script>
+</body>
+</html>

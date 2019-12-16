@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双向链表 LinkedList-数据结构</title>
+</head>
+<body>
+    <script src="src/doublyLinkedList.js"></script>
+    <script>
+        var dblink=new doublyLinkedList();
+        
+        dblink.append(1);
+        dblink.append(2);
+        console.log(dblink.toString());
+        dblink.remove(1);
+        console.log(dblink.toString());
+        dblink.append(3);
+
+    </script>
+</body>
+</html>
