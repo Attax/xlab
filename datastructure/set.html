@@ -7,8 +7,25 @@
 <body>
     <script src="src/set.js"></script>
     <script>
-       var set=new Set();
-       
+		var set=new Set();
+		set.add(1);
+		set.add(2);
+		set.add(3);
+		set.add(4);
+		
+		var setB=new Set();
+		setB.add(4);
+		setB.add(5);
+		setB.add(6);
+		
+		var unionAB=set.union(setB);
+		console.log('并集：',unionAB.values());
+		
+		var intersectionAB=set.intersection(setB);
+		console.log('交集',intersectionAB.values());
+		
+		var _diffSet=set.difference(setB);
+		console.log('差集',_diffSet.values());
     </script>
 </body>
 </html>
