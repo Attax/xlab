@@ -1,4 +1,4 @@
-//实现doublyLinkedList数据结构
+//实现Set数据结构
 
 
 var Set = function() {
